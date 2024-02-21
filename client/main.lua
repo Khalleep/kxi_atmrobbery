@@ -48,7 +48,7 @@ if count > 0 then
             job = K.Jobs,
             callLocation = playerData.coords,
             callCode = { code = 'ATM Robbery' },
-            message = "A "..playerData.sex.. "Is robbing a ATM at: ".. playerData.street_1,
+            message = "A "..playerData.sex.. "Is robbing an ATM at: ".. playerData.street_1,
             flashes = false,
             image = image or nil,
             blip = {
