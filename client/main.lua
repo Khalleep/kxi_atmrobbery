@@ -63,7 +63,7 @@ if count > 0 then
     elseif K.Notify == "core-dispatch" then
         for k, v in pairs(K.Jobs) do
             local coords = GetEntityCoords(PlayerPedId())
-            exports['core_dispach']:addMessage("ATM Robberyy", {coords}, v, 3000, 11, 5 )
+            exports['core_dispach']:addMessage("ATM Robbery", {coords}, v, 3000, 11, 5 )
         end
     elseif K.Notify == "op-dispatch" then
         for k,v in pairs(K.Jobs) do
