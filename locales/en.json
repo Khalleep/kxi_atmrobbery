@@ -1,0 +1,6 @@
+{
+    "failed": "You failed to rob the ATM!",
+    "noItem": "You don't have the right items",
+    "atm": "Rob the ATM",
+    "yougot": "You got %s$"
+}
