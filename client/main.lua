@@ -20,7 +20,7 @@ local function main()
 
 local count = ox_inventory:Search('count', K.Robitem)
 if count > 0 then
-    local result = lib.skillCheck({'medium', 'medium', 'medium', 'medium'}, K.Inputs)
+    local result = lib.skillCheck({K.Skillcheck, K.Skillcheck, K.Skillcheck, K.Skillcheck}, K.Inputs)
             
     if K.Notify == "cd_dispatch" then
         local data = exports['cd_dispatch']:GetPlayerInfo()
@@ -48,7 +48,7 @@ if count > 0 then
             job = K.Jobs,
             callLocation = playerData.coords,
             callCode = { code = 'ATM Robbery' },
-            message = "A "..playerData.sex.. "Is robbing an ATM at: ".. playerData.street_1,
+            message = "A "..playerData.sex.. "Is robbing a ATM at: ".. playerData.street_1,
             flashes = false,
             image = image or nil,
             blip = {
@@ -110,8 +110,8 @@ end
 CreateThread(function()
     local options = {
         label = locale('atm'),
-        icon = "fa-solid fa-star",
-        distance = 1.5,
+        icon = K.RobIcon,
+        distance = K.Distance,
         onSelect = function()
             main()
         end
