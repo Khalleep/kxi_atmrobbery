@@ -9,12 +9,25 @@ K.Jobs = {
 -- what dispatch you are using
 K.Notify = "op-dispatch" -- supports op-dispatch, core-dispatch, quasar-dispatch and cd_dispatch
 
+-- Here you can choose how hard the skillcheck is. difficulty: 'easy' or 'medium' or 'hard' or table
+K.Skillcheck = 'medium'
+K.Skillcheck = 'medium'
+K.Skillcheck = 'medium'
+K.Skillcheck = 'medium'
+
+
 -- choose what item do you need to start the robbery
 K.Robitem = 'WEAPON_CROWBAR'
 
 K.Reward = 'black_money' -- what do you get from the robbery
 K.MinAmount = 1 -- the min amount you get from the robbery
 K.MaxAmount = 12 -- the max amount you get from the robbery
+
+-- the distance you want to the robbery
+K.Distance = 0.7
+
+-- What icon do you want when you look at the ATM with the target?
+K.RobIcon = "fa-solid fa-star" -- You can choose the icons here: https://fontawesome.com/search
 
 -- What models you want for the robbery
 K.Models = {
