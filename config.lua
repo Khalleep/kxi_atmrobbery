@@ -26,6 +26,9 @@ K.MaxAmount = 12 -- the max amount you get from the robbery
 -- the distance you want to the robbery
 K.Distance = 0.7
 
+-- How long is the robbery
+K.RobbingTime = 29000
+
 -- What icon do you want when you look at the ATM with the target?
 K.RobIcon = "fa-solid fa-star" -- You can choose the icons here: https://fontawesome.com/search
 
