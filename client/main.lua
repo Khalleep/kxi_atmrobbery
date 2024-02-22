@@ -79,7 +79,7 @@ if count > 0 then
 
         if result then
             if lib.progressCircle({
-                duration = 29000,
+                duration = K.RobbingTime,
                 position = 'bottom',
                 useWhileDead = false,
                 canCancel = true,
