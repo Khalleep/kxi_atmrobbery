@@ -1,6 +1,7 @@
 {
-    "failed": "You failed to rob the ATM!",
-    "noItem": "You don't have the right items",
+    "failed": "you failed",
+    "noItem": "You dont have the right items!",
     "atm": "Rob the ATM",
-    "yougot": "You got %s$"
+    "yougot": "You got %s$",
+    "robnotify": "ATM robbery"
 }
