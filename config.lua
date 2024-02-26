@@ -15,6 +15,7 @@ K.Skillcheck = 'medium'
 K.Skillcheck = 'medium'
 K.Skillcheck = 'medium'
 
+K.Progressbar = 'ox_lib-text'
 
 -- choose what item do you need to start the robbery
 K.Robitem = 'WEAPON_CROWBAR'
@@ -24,9 +25,8 @@ K.MinAmount = 1 -- the min amount you get from the robbery
 K.MaxAmount = 12 -- the max amount you get from the robbery
 
 -- the distance you want to the robbery
-K.Distance = 0.7
+K.Distance = 1.3
 
--- How long is the robbery
 K.RobbingTime = 29000
 
 -- What icon do you want when you look at the ATM with the target?
