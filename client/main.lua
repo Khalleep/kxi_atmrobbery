@@ -27,7 +27,7 @@ if count > 0 then
         TriggerServerEvent('cd_dispatch:AddNotification', {
             job_table = K.Jobs,
             coords = data.coords,
-            title = '10-15 - ATM Robbery',
+            title = locale('robnotify'),
             message = ''..data.sex..' robbing an ATM at '..data.street, 
             flash = 0,
             unique_id = data.unique_id,
@@ -37,7 +37,7 @@ if count > 0 then
                 scale = 1.2,
                 colour = 39,
                 flashes = false,
-                text = '911 - ATM Robbery',
+                text = locale('robnotify'),
                 time = 5,
                 sound = 1,
             }
@@ -56,22 +56,27 @@ if count > 0 then
                 scale = 1.5,
                 colour = 1,
                 flashes = true,
-                text = 'ATM Robbery',
+                text = locale('robnotify'),
                 time = (20 * 1000),
             }
         })
     elseif K.Notify == "core-dispatch" then
-        for k, v in pairs(K.Jobs) do
-            local coords = GetEntityCoords(PlayerPedId())
-            exports['core_dispach']:addMessage("ATM Robbery", {coords}, v, 3000, 11, 5 )
-        end
+    TriggerServerEvent(
+        "core_dispatch:addMessage",
+        locale('robnotify'),
+        {coords[1], coords[2], coords[3]},
+        "police",
+        5000,
+        11,
+        5
+    )
     elseif K.Notify == "op-dispatch" then
         for k,v in pairs(K.Jobs) do
             local job = v -- Jobs that will recive the alert
-            local text = "ATM Robbery" -- Main text alert
+            local text = locale('robnotify') -- Main text alert
             local coords = GetEntityCoords(PlayerPedId()) -- Alert coords
             local id = GetPlayerServerId(PlayerId()) -- Player that triggered the alert
-            local title = "ATM Robbery" -- Main title alert
+            local title = locale('robnotify') -- Main title alert
             local panic = false -- Allow/Disable panic effect
             TriggerServerEvent('Opto_dispatch:Server:SendAlert', job, title, text, coords, panic, id)
          end
@@ -106,7 +111,6 @@ if count > 0 then
     end
 end
 
-
 CreateThread(function()
     local options = {
         label = locale('atm'),
@@ -118,4 +122,4 @@ CreateThread(function()
 
     }
     exports.ox_target:addModel(K.Models, options)
-end)
+ end)
