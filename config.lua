@@ -15,8 +15,6 @@ K.Skillcheck = 'medium'
 K.Skillcheck = 'medium'
 K.Skillcheck = 'medium'
 
-K.Progressbar = 'ox_lib-text'
-
 -- choose what item do you need to start the robbery
 K.Robitem = 'WEAPON_CROWBAR'
 
